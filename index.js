@@ -64,10 +64,14 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
-}
+function inning(){
+  function getRandomScore(max) {
+    return Math.floor(Math.random() * max);
+  }// getRandomScore function
+  return getRandomScore(3);
+}// inning function
 
+console.log('Task 2:',inning());
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -83,7 +87,7 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
+function finalScore(innings, numOfInnings){
   /*Code Here*/
 }
 
