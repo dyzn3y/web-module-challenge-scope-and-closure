@@ -87,8 +87,17 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(innings, numOfInnings){
-  /*Code Here*/
+function finalScore(inningCB, innings){
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i =0; i < innings; i++){
+    homeScore = homeScore + inningCB();
+    awayScore = awayScore + inningCB();
+  }
+  return {
+    Home: homeScore,
+    Away: awayScore
+  }
 }
 
 
@@ -105,8 +114,15 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inningCB) {
+  let homeScore = 0
+  let awayScore = 0
+  homeScore = homeScore + inningCB();
+  awayScore = awayScore + inningCB();
+  return {
+    Home: homeScore,
+    Away: awayScore
+  }
 
 }
 
